@@ -26,4 +26,3 @@
       console.log(formData);
         form.reset();
   });
-</script>
