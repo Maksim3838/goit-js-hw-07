@@ -28,13 +28,13 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-const markup = images
+const tututu = images
   .map(
     (image) =>
-      `<li class="gallery-item">
+      `<li class="gallery-lalala">
         <img src="${image.url}" alt="${image.alt}">
       </li>`
   )
   .join("");
 
-gallery.insertAdjacentHTML("beforeend", markup);
+gallery.insertAdjacentHTML("beforeend", tututu);
