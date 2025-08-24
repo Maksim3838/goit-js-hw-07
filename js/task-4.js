@@ -9,9 +9,10 @@
   </label>
   <button type="submit">Log in</button>
 </form>
+
  const form = document.querySelector(".login-form");
-  form.addEventListener("submit", (event) => {
-    event.preventDefault(); 
+  form.addEventListener("submit", (event) => 
+  {event.preventDefault(); 
     const { email, password } = form.elements;
      const emailValue = email.value.trim();
     const passwordValue = password.value.trim();
