@@ -38,3 +38,22 @@ const tututu = images
   .join("");
 
 gallery.insertAdjacentHTML("beforeend", tututu);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
