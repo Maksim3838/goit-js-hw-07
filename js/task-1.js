@@ -11,7 +11,3 @@ console.log(`Category:`,itemuu);
 console.log(`Elements:`,tututu);
 })
 
-
-
-
-
