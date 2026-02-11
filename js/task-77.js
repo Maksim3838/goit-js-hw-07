@@ -77,23 +77,56 @@
 <h1>Hello, <span id="name-output">Anonymous</span>!</h1> */}
 
 
-const input = document.querySelector(`#name-input`);
-const output = document.querySelector(`#name-output`);
+// const input = document.querySelector(`#name-input`);
+// const output = document.querySelector(`#name-output`);
 
-input.addEventListener("input", popopo);
+// input.addEventListener("input", popopo);
 
-function popopo (event) {
-  const tututu = event.target.value.trim();
-  if (tututu === "") {
-    output.textContent = "Anonymous"
-  } else {output.textContent = tututu}
-}
+// function popopo (event) {
+//   const tututu = event.target.value.trim();
+//   if (tututu === "") {
+//     output.textContent = "Anonymous"
+//   } else {output.textContent = tututu}
+// }
 
+// input.addEventListener("input",(event) => {
+//   const tututu = event.target.value.trim();
+//   if (tututu === "") {
+//     output.textContent = "Anonymous";
+//   } else { output.textContent = tututu; }
+// })
 
+                                                    //  4
 
+const form = document.querySelector(`.login-form`); // отримуємо форму за класом
 
+// Додаємо слухача події "submit"
+form.addEventListener("submit", (event) => {
+  event.preventDefault(); // зупиняємо стандартну відправку форми
 
+  // Деструктуризація елементів форми по name
+  const { email, password } = form.elements;
 
+  // Отримуємо значення та видаляємо зайві пробіли
+  const emailValue = email.value.trim();
+  const passwordValue = password.value.trim();
+
+  // Перевірка, чи всі поля заповнені
+  if (emailValue === "" || passwordValue === "") {
+    alert('All form fields must be filled in');
+    return;
+  }
+
+  // Формуємо об'єкт з даними форми
+  const formData = {
+    email: emailValue,
+    password: passwordValue,
+  };
+
+  console.log(formData); // виводимо дані в консоль
+
+  form.reset(); // очищаємо форму
+});
 
 
 
