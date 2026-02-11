@@ -73,16 +73,21 @@
   //                                                                4
 
 
-<input type="text" id="name-input" placeholder="Please enter your name" />
-<h1>Hello, <span id="name-output">Anonymous</span>!</h1>
+{/* <input type="text" id="name-input" placeholder="Please enter your name" />
+<h1>Hello, <span id="name-output">Anonymous</span>!</h1> */}
 
 
+const input = document.querySelector(`#name-input`);
+const output = document.querySelector(`#name-output`);
 
+input.addEventListener("input", popopo);
 
-
-
-
-
+function popopo (event) {
+  const tututu = event.target.value.trim();
+  if (tututu === "") {
+    output.textContent = "Anonymous"
+  } else {output.textContent = tututu}
+}
 
 
 
