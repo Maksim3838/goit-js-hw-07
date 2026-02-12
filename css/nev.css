@@ -66,14 +66,14 @@ input {
 }
 
 .car-button {
-  background-color: #007bff;
+  background-color: #05e850;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.7s;
 }
 
 .car-button:hover {
