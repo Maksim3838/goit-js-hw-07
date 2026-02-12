@@ -98,35 +98,44 @@
 
                                                     //  4
 
-const form = document.querySelector(`.login-form`); // отримуємо форму за класом
+// const form = document.querySelector(`.login-form`); // отримуємо форму за класом
 
-// Додаємо слухача події "submit"
-form.addEventListener("submit", (event) => {
-  event.preventDefault(); // зупиняємо стандартну відправку форми
+// // Додаємо слухача події "submit"
+// form.addEventListener("submit", (event) => {
+//   event.preventDefault(); // зупиняємо стандартну відправку форми
 
-  // Деструктуризація елементів форми по name
-  const { email, password } = form.elements;
+//   // Деструктуризація елементів форми по name
+//   const { email, password } = form.elements;
 
-  // Отримуємо значення та видаляємо зайві пробіли
-  const emailValue = email.value.trim();
-  const passwordValue = password.value.trim();
+//   // Отримуємо значення та видаляємо зайві пробіли
+//   const emailValue = email.value.trim();
+//   const passwordValue = password.value.trim();
 
-  // Перевірка, чи всі поля заповнені
-  if (emailValue === "" || passwordValue === "") {
-    alert('All form fields must be filled in');
-    return;
-  }
+//   // Перевірка, чи всі поля заповнені
+//   if (emailValue === "" || passwordValue === "") {
+//     alert('All form fields must be filled in');
+//     return;
+//   }
 
-  // Формуємо об'єкт з даними форми
-  const formData = {
-    email: emailValue,
-    password: passwordValue,
-  };
+//   // Формуємо об'єкт з даними форми
+//   const formData = {
+//     email: emailValue,
+//     password: passwordValue,
+//   };
 
-  console.log(formData); // виводимо дані в консоль
+//   console.log(formData); // виводимо дані в консоль
 
-  form.reset(); // очищаємо форму
-});
+//   form.reset(); // очищаємо форму
+// });
+
+// document.addEventListener("keypress", ryt);
+
+// function ryt(event) {
+//   console.log(event.key);
+  
+// }
+
+
 
 
 
