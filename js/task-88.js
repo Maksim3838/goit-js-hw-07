@@ -55,7 +55,7 @@ const cars = [
     },
     {
       id: 4,
-      car: "BMW",
+      car: "WBM",
       type: "5 siries",
       price: 9000,
       img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUH96e58ynLO8SXMsFTNYkJci79eAZ8CyqcZsZ8snvzz2sfLl3Ojd1BQoaWBcrMKWvSYc&usqp=CAU",
@@ -113,15 +113,35 @@ const cars = [
 // };
 
 
+// const form = document.querySelector(`.js-form`);
+// const nevList = document.querySelector(`.js-list`);
 
+// function ret(arr) {
+//   return arr.map((car) =>
+//     `<li class="car-card">
+//   <img class="car-image" src="${car.img}" alt="${car.type}">
+//   <h2 class="car-title">${car.car}</h2>
+//   <h3 class="car-type">${car.type}</h3>
+//   <span class="car-price">${car.price}</span>
+//   </li>`
+//   ).join("")
 
+// }
+// nevList.insertAdjacentHTML("beforeend", ret(cars));
 
-
-
-
-
-
-
-
-
+// form.addEventListener("submit", pezalt)
+  
+// function pezalt(event) {
+//   event.preventDefault();
+//   const elements = event.target.elements;
+//   const queryValue = elements.query.value.toLowerCase().trim();
+//   const optionsValue = elements.options.value;
+   
+//   const rezalt = cars.filter((arr) => arr[optionsValue].toLowerCase().trim().includes(queryValue) );
+  
+//   nevList.innerHTML = ret(rezalt);
+  
+  
+// }
+ 
 
