@@ -103,7 +103,7 @@ const cars = [
   
 //   const elementsValue = elements.query.value;
 //   const elementOption = elements.options.value;
-// //                                                  includes — це метод рядків (string) і масивів (array) у JavaScript. 
+// //                                                  includes — це метод рядків (string) і масивів (array) у JavaScript.
 // //                                          Він перевіряє, чи міститься певне значення в рядку або масиві, і повертає true/false.
 //   const rezalt = cars.filter((car) =>
 //     car[elementOption].toLowerCase().includes(elementsValue.toLowerCase().trim())
@@ -144,4 +144,43 @@ const cars = [
   
 // }
  
+
+const form = document.querySelector(`.js-form`);
+const nevList = document.querySelector(`.js-list`);
+
+function list(arr) { 
+  return arr.map((car) => `
+<li class="car-card">
+<img class="car-image" src="${car.img}" alt="${car.type}">
+<h2 class="car-title ">${car.car}</h2>
+<h3 class="car-type">${car.type}</h3>
+<span class="car-price ">${car.price}</span>
+</li>
+  `).join("")
+};
+
+nevList.insertAdjacentHTML("beforeend", list(cars));
+
+form.addEventListener("submit", tyr);
+
+function tyr(event) {
+  event.preventDefault();
+  const elements = event.target.elements;
+  const queryValue = elements.query.value.toLowerCase().trim();
+  const optionsValue = elements.options.value;
+  const rezalt = cars.filter((car) => car[optionsValue].toLowerCase().trim().includes(queryValue));
+
+  nevList.innerHTML = list(rezalt);
+  
+};
+
+
+
+
+
+
+
+
+
+
 
