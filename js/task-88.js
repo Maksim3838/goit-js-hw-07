@@ -145,42 +145,63 @@ const cars = [
 // }
  
 
+// const form = document.querySelector(`.js-form`);
+// const nevList = document.querySelector(`.js-list`);
+
+// function list(arr) { 
+//   return arr.map((car) => `
+// <li class="car-card">
+// <img class="car-image" src="${car.img}" alt="${car.type}">
+// <h2 class="car-title ">${car.car}</h2>
+// <h3 class="car-type">${car.type}</h3>
+// <span class="car-price ">${car.price}</span>
+// </li>
+//   `).join("")
+// };
+
+// nevList.insertAdjacentHTML("beforeend", list(cars));
+
+// form.addEventListener("submit", tyr);
+
+// function tyr(event) {
+//   event.preventDefault();
+//   const elements = event.target.elements;
+//   const queryValue = elements.query.value.toLowerCase().trim();
+//   const optionsValue = elements.options.value;
+//   const rezalt = cars.filter((car) => car[optionsValue].toLowerCase().trim().includes(queryValue));
+
+//   nevList.innerHTML = list(rezalt);
+  
+// };
+
+
+
 const form = document.querySelector(`.js-form`);
 const nevList = document.querySelector(`.js-list`);
 
-function list(arr) { 
+function list(arr) {
   return arr.map((car) => `
-<li class="car-card">
-<img class="car-image" src="${car.img}" alt="${car.type}">
-<h2 class="car-title ">${car.car}</h2>
+  <li class="car-card">
+  <img class="car-image" src="${car.img}" alt="${car.type}">
+<h2 class="car-title">${car.car}</h2>
 <h3 class="car-type">${car.type}</h3>
-<span class="car-price ">${car.price}</span>
-</li>
+<span class="car-price">${car.price}</span>
+  </li>
   `).join("")
-};
+}
 
 nevList.insertAdjacentHTML("beforeend", list(cars));
 
-form.addEventListener("submit", tyr);
+form.addEventListener("submit", tytyty);
 
-function tyr(event) {
+function tytyty(event) {
   event.preventDefault();
   const elements = event.target.elements;
   const queryValue = elements.query.value.toLowerCase().trim();
   const optionsValue = elements.options.value;
-  const rezalt = cars.filter((car) => car[optionsValue].toLowerCase().trim().includes(queryValue));
-
-  nevList.innerHTML = list(rezalt);
   
-};
+   const rezalt = cars.filter((car) => car[optionsValue].toLowerCase().trim().includes(queryValue));
 
-
-
-
-
-
-
-
-
-
+   nevList.innerHTML = list(rezalt);
+}
 
