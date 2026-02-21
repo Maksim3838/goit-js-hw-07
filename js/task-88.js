@@ -181,11 +181,11 @@ const nevList = document.querySelector(`.js-list`);
 
 function list(arr) {
   return arr.map((car) => `
-  <li class="car-card">
+  <li data-id = "${car.id}" class="car-card">
   <img class="car-image" src="${car.img}" alt="${car.type}">
 <h2 class="car-title">${car.car}</h2>
 <h3 class="car-type">${car.type}</h3>
-<span class="car-price">${car.price}</span>
+<span class="car-price">Ціна:${car.price}</span>
   </li>
   `).join("")
 }
@@ -204,4 +204,28 @@ function tytyty(event) {
 
    nevList.innerHTML = list(rezalt);
 }
+
+
+nevList.addEventListener("click", far);
+ 
+  
+function far(event) {
+  if (event.target === event.currentTarget) {
+    return;
+  }
+  const curentProduct = event.target.closest(`.car-card`);
+  const id = curentProduct.dataset.id;
+  const car = cars.find((item) => item.id === +id);
+ 
+  const instance = basicLightbox.create(`
+	 <div class="modal">
+      <img src="${car.img}" alt="${car.name}"width="300"/>
+      <h2>${car.car}</h2>
+      <h3>Ціна: ${car.price} грн</h3>
+          </div>
+  `)
+
+  instance.show()
+
+};
 
