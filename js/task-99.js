@@ -43,3 +43,48 @@ const products = [
     },
 ];
 
+
+const nevProduct = document.querySelector(`.product-list`);
+nevProduct.addEventListener("click", nevClick);
+
+function productList(arr) {
+  return arr.map((product) => `
+  <li data-id="${product.id}" class="content">
+  <img class="" src="${product.img}" alt="${product.name}" width="300" />
+<h2 class="">${product.name}</h2>
+<h3 class="">Ціна:${product.price}</h3>
+  </li>
+  `).join("");
+}
+
+nevProduct.insertAdjacentHTML("beforeend", productList(products));
+
+
+
+function nevClick(event) {
+  if (event.target === event.currentTarget) {
+    return;
+  }
+ const currentProduct = event.target.closest(".content")
+  const id = currentProduct.dataset.id;
+  const prod = products.find((item) => item.id === +id);
+
+   const instance = basicLightbox.create(`
+	 <div class="modal">
+      <img src="${prod.img}" alt="${prod.name}"width="300"/>
+      <h2 class="car-title">${prod.name}</h2>
+      <h3 class="car-price">Ціна: ${prod.price} грн</h3>
+          </div>
+  `)
+
+  instance.show()
+  
+  console.log(instance);
+  
+  
+}
+
+
+
+
+
