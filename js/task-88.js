@@ -220,8 +220,8 @@ function far(event) {
   const instance = basicLightbox.create(`
 	 <div class="modal">
       <img src="${car.img}" alt="${car.name}"width="300"/>
-      <h2>${car.car}</h2>
-      <h3>Ціна: ${car.price} грн</h3>
+      <h2 class="car-title">${car.car}</h2>
+      <h3 class="car-price">Ціна: ${car.price} грн</h3>
           </div>
   `)
 

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.4/basicLightbox.min.css" integrity="sha512-yNvWz1C0Io3RxC18Hrqh/V+bFUlqSt3aVAtTF7xggTqr9JnV2ZQOGrd4gyaErdDgDOFK5nb/HQL1Q/j7ehmOow==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/nev.css" />
+     </head>
+  <body>
+    <p><a href="index.html">Go back</a></p>
+
+    <form action="submit" class="js-form car-search">
+      <div class="car-group">
+        <input type="text" name="query" class="car-input" placeholder="Пошук авто" />
+      </div>
+      <div class="car-group">
+        <select name="options" class="car-select">
+          <option value="car">Марка</option>
+          <option value="type">Модель</option>
+                  </select>
+      </div>
+      <button type="submit" class="car-button">Пошук</button>
+    </form>
+
+    <ul class="js-list car-list"></ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/basicLightbox/5.0.4/basicLightbox.min.js" integrity="sha512-ycqisnM5/8n5gDxYe0MTYoW+5DDuupgGdbdsJ9zcu66ZszaKh4JGsmjzyi7jJY4AjynXc43DOba/m+yVGmv+wQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./js/task-99.js"></script>
+  </body>
+</html>
