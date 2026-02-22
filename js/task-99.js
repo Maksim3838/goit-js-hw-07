@@ -72,7 +72,7 @@ function nevClick(event) {
    const instance = basicLightbox.create(`
 	 <div class="modal">
       <img src="${prod.img}" alt="${prod.name}"width="300"/>
-      <h2 class="car-title">${prod.name}</h2>
+      <h2 class="car-title" >${prod.name}</h2>
       <h3 class="car-price">Ціна: ${prod.price} грн</h3>
           </div>
   `)
