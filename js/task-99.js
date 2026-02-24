@@ -44,45 +44,93 @@ const products = [
 ];
 
 
-const nevProduct = document.querySelector(`.product-list`);
-nevProduct.addEventListener("click", nevClick);
+// const nevProduct = document.querySelector(`.product-list`);
+// nevProduct.addEventListener("click", nevClick);
 
-function productList(arr) {
+// function productList(arr) {
+//   return arr.map((product) => `
+//   <li data-id="${product.id}" class="content">
+//   <img class="" src="${product.img}" alt="${product.name}" width="300" />
+// <h2 class="">${product.name}</h2>
+// <h3 class="">Ціна:${product.price}</h3>
+//   </li>
+//   `).join("");
+// }
+
+// nevProduct.insertAdjacentHTML("beforeend", productList(products));
+
+
+
+// function nevClick(event) {
+//   if (event.target === event.currentTarget) {
+//     return;
+//   }
+//  const currentProduct = event.target.closest(".content")
+//   const id = currentProduct.dataset.id;
+//   const prod = products.find((item) => item.id === +id);
+
+//    const instance = basicLightbox.create(`
+// 	 <div class="modal">
+//       <img src="${prod.img}" alt="${prod.name}"width="300"/>
+//       <h2 class="car-title" >${prod.name}</h2>
+//       <h3 class="car-price">Ціна: ${prod.price} грн</h3>
+//           </div>
+//   `)
+
+//   instance.show()
+  
+//   console.log(instance);
+  
+// }
+
+
+
+const nevProduct = document.querySelector(`.product-list`);
+nevProduct.addEventListener("click", nevClic);
+function nevList(arr) {
   return arr.map((product) => `
   <li data-id="${product.id}" class="content">
-  <img class="" src="${product.img}" alt="${product.name}" width="300" />
-<h2 class="">${product.name}</h2>
-<h3 class="">Ціна:${product.price}</h3>
-  </li>
+  <img class="img-product" src="${product.img}" alt="${product.name}"/>
+<h2 class="car-naz">Назва:${product.name}</h2>
+<p class="car-sum">Ціна:${product.price}</p>
+<p class="car-title">Опис:${product.description}</p>
+</li>
   `).join("");
-}
+};
 
-nevProduct.insertAdjacentHTML("beforeend", productList(products));
+nevProduct.insertAdjacentHTML("beforeend", nevList(products));
 
-
-
-function nevClick(event) {
+function nevClic(event) {
   if (event.target === event.currentTarget) {
     return;
-  }
- const currentProduct = event.target.closest(".content")
-  const id = currentProduct.dataset.id;
-  const prod = products.find((item) => item.id === +id);
-
-   const instance = basicLightbox.create(`
-	 <div class="modal">
-      <img src="${prod.img}" alt="${prod.name}"width="300"/>
-      <h2 class="car-title" >${prod.name}</h2>
-      <h3 class="car-price">Ціна: ${prod.price} грн</h3>
-          </div>
-  `)
-
+  };
+  const nevProduct = event.target.closest(`.content`);
+    const id = nevProduct.dataset.id;
+  const productt = products.find((item) => item.id === +id);
+  
+  const instance = basicLightbox.create(`
+   <button class="modal-close">✖</button>
+	  <img class="img-product" src="${productt.img}" alt="${productt.name}"/>
+<h2 class="car-na">Назва:${productt.name}</h2>
+<p class="car-sum">Ціна:${productt.price}</p>
+<p class="car-titles">Опис:${productt.description}</p>
+`)
   instance.show()
-  
-  console.log(instance);
-  
-  
-}
+
+ document.querySelector(".modal-close")
+    .addEventListener("click", () => {
+      instance.close();
+    });
+
+ }
+
+
+
+
+
+
+
+
 
 
 

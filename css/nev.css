@@ -143,39 +143,71 @@ input {
 
 
 .product-list {
-  list-style: none;
-  display: flex;
-   justify-content: center;
-  padding: 0;
-  margin: 0;
+ display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 25px;
 }
 
 
-.content {
-   background-color: #fff;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
 
 
 .car-title{
-  color: #33f902;
+  color: #1e0b9a;
+}
+
+.img-product{
+  width: 300px;
+}
+
+.car-naz{
+  color: #000000;
+}
+
+.car-sum{
+  color: #178e0a;
+}
+
+
+.car-na{
+  color: #3e93f5;
+}
+
+.car-titles{
+  color: #bdeb08;
 }
 
 
 
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #f50505;
+}
+
+.basicLightbox__placeholder {
+  position: relative;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+}
 
 
 
+.content {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
 
+.content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-
-
+.modal-close:hover {
+  transform: scale(1.2);
+}
