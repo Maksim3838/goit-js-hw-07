@@ -109,6 +109,7 @@ input {
   width: 300px;
   height: 200px;
   margin-bottom: 10px;
+  
 }
 
 .car-title {
@@ -157,18 +158,21 @@ input {
 
 .img-product{
   width: 300px;
-}
+  }
 
 .car-naz{
+  text-align: center;
   color: #000000;
 }
 
 .car-sum{
+  text-align: center;
   color: #178e0a;
 }
 
 
 .car-na{
+  text-align: center;
   color: #3e93f5;
 }
 
